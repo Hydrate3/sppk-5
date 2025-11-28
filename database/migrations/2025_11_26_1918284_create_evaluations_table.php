@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('alternative_id')->constrained()->cascadeOnDelete();
             $table->foreignId('criterion_id')->constrained('criteria')->cascadeOnDelete();
-            $table->decimal('value', 12, 4);
+            $table->decimal('value', 20, 2)->nullable();
             $table->timestamps();
         });
     }
